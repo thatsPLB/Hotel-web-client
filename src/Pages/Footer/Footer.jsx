@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2023 - All right reserved by MidGen Tech</p>
+                    <p>Copyright © 2023 - All right reserved by Hotel Peradise</p>
                 </aside>
             </footer>
         </>
