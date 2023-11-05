@@ -33,13 +33,15 @@ const Login = () => {
         <div className="form-control mt-6">
           <input className="btn btn-primary" type="submit" value="Login" />
         </div>
+        
     </form>
     
       </form>
-      
+      <p className='m-4 text-center'>New to Hotel Peradise? <Link className='text-violet-600 font-bold' to="/signup">Sign UP</Link></p>
     </div>
-    <p className='m-4 text-center'>New to Hotel Peradise? <Link className='text-violet-600 font-bold' to="/signup">Sign UP</Link></p>
+    
   </div>
+  
 </div>
     );
 };
