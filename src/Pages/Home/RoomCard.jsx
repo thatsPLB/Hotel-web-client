@@ -1,7 +1,7 @@
 
 
 const RoomCard = ({room}) => {
-    const {image,name,rating}=room
+    const {image,name,rating}= room
     return (
         <div className="card w-96  shadow-xl">
         <figure><img src={image} alt="Shoes" /></figure>
