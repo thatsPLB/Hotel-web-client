@@ -1,10 +1,11 @@
+import Rooms from "./Rooms";
 
 
 
 const Home = () => {
     return (
         <div>
-           <h2>This is Home</h2>         
+           <Rooms></Rooms>       
         </div>
     );
 };
