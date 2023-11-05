@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom';
 import logimg from '../../assets/3-Login-Page-Screen.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
+  const {signIn} = useContext(AuthContext)
+
     const handleLogin = event =>{
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value
+        console.log(name,email,password);
+        signIn(email,password)
+        .then(result =>{
+          const user = result.user
+          console.log(user);
+        })
+        .catch(error=> console.log(error))
     }
 
     return (
@@ -12,7 +26,7 @@ const Login = () => {
       <img src={logimg} alt="" />
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-300">
-      <form className="card-body ">
+      <div className="card-body ">
       <h1 className="text-5xl font-bold">Login now!</h1>
     <form onSubmit={handleLogin}>
    <div className="form-control ">
@@ -36,7 +50,7 @@ const Login = () => {
         
     </form>
     
-      </form>
+      </div>
       <p className='m-4 text-center'>New to Hotel Peradise? <Link className='text-violet-600 font-bold' to="/signup">Sign UP</Link></p>
     </div>
     

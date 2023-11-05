@@ -1,10 +1,25 @@
 import { Link } from 'react-router-dom';
 import logimg from '../../assets/3-Login-Page-Screen.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 
 const SignUp = () => {
+  const {createUser} = useContext(AuthContext)
     const handleSingUp = event =>{
         event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value
+        console.log(name,email,password);
+
+        createUser(email,password)
+        .then(result =>{
+          const user = result.user
+          console.log(user);
+        })
+        .catch(error => console.log(error))
     }
     return (
         <div className="hero min-h-screen ">
@@ -13,7 +28,7 @@ const SignUp = () => {
             <img src={logimg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-violet-300">
-            <form className="card-body ">
+            <div className="card-body ">
             <h1 className="text-5xl font-bold">Resister now!</h1>
           <form onSubmit={handleSingUp}>
          <div className="form-control ">
@@ -41,7 +56,7 @@ const SignUp = () => {
               </div>
           </form>
           
-            </form>
+            </div>
             <p className='m-4 text-center'>Already have an account? <Link className='text-violet-600 font-bold' to="/login">Login</Link></p>
           </div>
           
