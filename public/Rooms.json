@@ -1,54 +1,45 @@
 [
     {
-      "id": "101",
       "image": "https://i.ibb.co/TwDTW1r/deluxs.webp",
       "name": "Deluxe Suite",
       "rating": 45
     },
     {
-      "id": "102",
       "image": "https://i.ibb.co/09cgYtw/standard.jpg",
       "name": "Standard Room",
       "rating": 32
     },
     {
-      "id": "103",
       "image": "https://i.ibb.co/ZMvHfQD/Royal-Suite-Living-Room-512x384.jpg",
       "name": "Executive Suite",
       "rating": 60
     },
     {
-      "id": "104",
       "image": "https://i.ibb.co/Bf53TBv/ocean.jpg",
       "name": "Ocean View Room",
       "rating": 28
     },
     {
-      "id": "105",
       "image": "https://i.ibb.co/vjZ2bZv/family.jpgg",
       "name": "Family Suite",
       "rating": 50
     },
     {
-      "id": "106",
       "image": "https://i.ibb.co/WWvCXN0/villa-fenosa-villa-fenosa-lounge-area-6887-6407e6d300ba4.jpg",
       "name": "Luxury Villa",
       "rating": 75
     },
     {
-      "id": "107",
       "image": "https://i.ibb.co/jwTrRdN/mountain.jpg",
       "name": "Mountain View Suite",
       "rating": 42
     },
     {
-      "id": "108",
       "image": "https://i.ibb.co/N1m4h3Y/honeymoon.jpg",
       "name": "Honeymoon Suite",
       "rating": 38
     },
     {
-      "id": "109",
       "image": "https://i.ibb.co/h9f3pSj/penthouse.jpg",
       "name": "Penthouse Suite",
       "rating": 65

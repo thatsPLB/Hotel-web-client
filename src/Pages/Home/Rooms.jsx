@@ -5,7 +5,7 @@ import RoomCard from "./RoomCard";
 const Rooms = () => {
     const [rooms,setRooms] = useState([]);
     useEffect ( () =>{
-        fetch('Rooms.json')
+        fetch('http://localhost:5000/Rooms')
         .then(res => res.json())
         .then(data => setRooms(data))
     } , [])

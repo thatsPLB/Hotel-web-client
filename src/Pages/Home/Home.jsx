@@ -1,11 +1,13 @@
-import Rooms from "./Rooms";
+import Newsletter from "./Newsletter";
+// import Rooms from "./Rooms";
 
 
 
 const Home = () => {
     return (
         <div>
-           <Rooms></Rooms>       
+           {/* <Rooms></Rooms>  */}
+           <Newsletter></Newsletter>      
         </div>
     );
 };
