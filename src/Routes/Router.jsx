@@ -8,6 +8,8 @@ import CheckOut from "../Pages/checkOut";
 import BookService from "../Pages/BookService/BookService";
 import AboutUs from "../Pages/Home/AboutUs";
 import ContactUs from "../Pages/Home/ContactUs";
+import Bookings from "../Pages/Bookings/Bookings";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
         {
           path:'contactus',
           element:<ContactUs></ContactUs>
+        },
+        {
+          path:'bookings',
+          element:<PrivateRoute><Bookings></Bookings></PrivateRoute>
         },
         {
           path:'book/:id',

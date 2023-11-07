@@ -19,9 +19,11 @@ const Navbar = () => {
   }
     const navLinks = <>
           <li><NavLink className="text-white" to="/">Home</NavLink></li>
-            <li><NavLink className="text-white" to="/rooms">Rooms</NavLink></li>
-            <li><NavLink className="text-white" to="/mybookings">My Bookings</NavLink></li>
-            { user?.email ? <li><button className="text-white" onClick={handleLogOut}>LogOut</button></li>
+            <li><Link className="text-white" to="/rooms">Rooms</Link></li>
+            { user?.email ? <>
+              <li><NavLink className="text-white" to="/bookings">My Bookings</NavLink> </li>
+              <li><button className="text-white" onClick={handleLogOut}>LogOut</button></li>
+            </>
             : <li> <Link to="/login">Login</Link></li>
             }
     </>
