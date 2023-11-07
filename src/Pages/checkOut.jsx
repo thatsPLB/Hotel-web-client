@@ -1,18 +1,18 @@
 import { useContext } from "react";
-import {  useLoaderData } from "react-router-dom";
+import {  Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 
 const CheckOut = () => {
     const room = useLoaderData();
-    const {image,name,rating,price,size,description,availability,} = room
+    const {_id,image,name,rating,price,size,description,availability,} = room
     const {user} = useContext(AuthContext)
     
 
-    const handleBookService = event =>{
-      event.preventDefault();
-    }
-    fetch()
+    // const handleBookService = event =>{
+    //   event.preventDefault();
+    // }
+    // fetch()
     return (
         <div>
            <h2>Room Details: {name}</h2> 
@@ -29,7 +29,9 @@ const CheckOut = () => {
     <p className="font-semibold">Ratings: {rating}</p>
     
     <div className="card-actions">
-      <button onClick={handleBookService} className='text-white uppercase bg-violet-800 mb-6'>Book Now</button>
+    <Link to={`/book/${_id}`}>
+    <button  className='text-white uppercase bg-violet-800 mb-6'>Book Now</button>
+      </Link>
     </div>
   </div>
 </div>
