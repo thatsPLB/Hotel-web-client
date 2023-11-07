@@ -7,10 +7,12 @@ const CheckOut = () => {
     const room = useLoaderData();
     const {image,name,rating,price,size,description,availability,} = room
     const {user} = useContext(AuthContext)
+    
 
-    const handleBookService =event =>{
+    const handleBookService = event =>{
       event.preventDefault();
     }
+    fetch()
     return (
         <div>
            <h2>Room Details: {name}</h2> 
