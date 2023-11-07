@@ -25,7 +25,7 @@ const Bookings = () => {
                 .then(data => {
                     console.log(data);
                     if (data.deletedCount > 0) {
-                        alert('deleted successful');
+                        alert('Deleted successful');
                         const remaining = bookings.filter(booking => booking._id !== id);
                         setBookings(remaining);
                     }
