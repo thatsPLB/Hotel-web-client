@@ -23,16 +23,15 @@ const BookService = () => {
         event.preventDefault();
 
         const form = event.target;
-        const name = form.name.value;
+        // const name = form.name.value;
         const date = form.date.value;
         const email = user?.email;
         const booking = {
-            customerName: name, 
+            RoomName: name, 
             email, 
-            image,
             date, 
-            service: name,
-            service_id: _id, 
+            image,
+            room_id: _id, 
             price: price
         }
 
@@ -49,7 +48,7 @@ const BookService = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                alert('service book successfully')
+                alert('Room book successfully')
             }
         })
 
@@ -62,7 +61,7 @@ const BookService = () => {
             <h2 className='text-center text-s'>Room Description: {description} </h2>
             <h2 className='text-center text-s'>Room Price: {price} </h2>
             <form onSubmit={handleBookService}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-purple-200">
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-black">Name</span>
@@ -79,13 +78,13 @@ const BookService = () => {
                         <label className="label">
                             <span className="label-text text-black">Email</span>
                         </label>
-                        <input type="text" name="email" placeholder="email" className="input bg-white input-bordered" />
+                        <input type="text" name="email" defaultValue={user?.email} className="input bg-white input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-black">Due amount</span>
                         </label>
-                        <input type="text" placeholder="$" className="input bg-white input-bordered" />
+                        <input type="text" defaultValue={price} className="input bg-white input-bordered" />
                     </div>
                 </div>
                 <div className="form-control mt-6">

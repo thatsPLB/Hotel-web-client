@@ -12,7 +12,7 @@ const Navbar = () => {
             <li><NavLink to="/login">Login</NavLink></li>
     </>
     return (
-        <div className="navbar">
+        <div className="navbar bg-purple-300">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn lg:hidden">
