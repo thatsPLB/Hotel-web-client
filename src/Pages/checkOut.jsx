@@ -1,9 +1,16 @@
-import { useLoaderData } from "react-router-dom";
+import { useContext } from "react";
+import {  useLoaderData } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const CheckOut = () => {
     const room = useLoaderData();
-    const {image,name,rating} = room
+    const {image,name,rating,price,size,description,availability,} = room
+    const {user} = useContext(AuthContext)
+
+    const handleBookService =event =>{
+      event.preventDefault();
+    }
     return (
         <div>
            <h2>Room Details: {name}</h2> 
@@ -12,11 +19,15 @@ const CheckOut = () => {
     <img src={image} alt="Shoes" className="rounded-xl" />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title">{name}!</h2>
-    <p>Ratings: {rating}</p>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <h2 className="card-title font-bold">{name}!</h2>
+    <h2 className="font-semibold">{description}</h2>
+    <h2 className="font-semibold">{size}</h2>
+    <p className="font-semibold">{price} Per Night</p>
+    <p className="font-semibold text-green-600">{availability}</p>
+    <p className="font-semibold">Ratings: {rating}</p>
+    
     <div className="card-actions">
-      <input className="btn btn-primary" type="submit" value="Book Now" />
+      <button onClick={handleBookService} className='text-white uppercase bg-violet-800 mb-6'>Book Now</button>
     </div>
   </div>
 </div>

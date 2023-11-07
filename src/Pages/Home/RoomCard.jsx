@@ -10,7 +10,7 @@ const RoomCard = ({room}) => {
         <div className="card-body">
           <h2 className="card-title">
             {name}
-            <div className="badge badge-secondary">NEW</div>
+            <div className="badge badge-secondary">Available</div>
           </h2>
           <div className="card-actions justify-center">
             <div className="badge badge-outline"> Ratings: {rating}</div>
