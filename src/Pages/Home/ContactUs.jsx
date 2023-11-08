@@ -1,16 +1,6 @@
 
-
-// const ContactUs = () => {
-//     return (
-//         <div>
-//            <h2>Contact us</h2> 
-//         </div>
-//     );
-// };
-
-// export default ContactUs;
 import { FaFacebook, FaTwitter,FaInstagram } from 'react-icons/fa';
-// import Navbar from '../Home/Navbar';
+
 
 
 

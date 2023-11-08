@@ -7,6 +7,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Navbar = () => {
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
 
   const {user, logOut} = useContext(AuthContext);
 
