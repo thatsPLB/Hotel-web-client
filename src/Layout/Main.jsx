@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "../Pages/Home/NavBar";
 
 
+
 const Main = () => {
     return (
         <div>

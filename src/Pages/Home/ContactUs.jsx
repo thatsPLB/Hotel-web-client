@@ -18,7 +18,7 @@ import { FaFacebook, FaTwitter,FaInstagram } from 'react-icons/fa';
 const ContactUs = () => {
     return (
         <div>
-              <div className='p-4 mb-6'>
+              <div className='p-4 mb-6 text-center'>
         <h2 className="text-3xl mb-4">Contact Us on</h2>
         <a className='p-4 flex text-lg items-center border rounded-t-lg' href="">
             <FaFacebook className='mr-3'></FaFacebook>

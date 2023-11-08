@@ -2,7 +2,7 @@
 
 function Newsletter() {
     return (
-      <div>
+      <div className="mt-4">
           <div className='w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ... border-2 border-solid border-violet-800 rounded flex items-center justify-center flex-col mb-4' style={{height: "50vh"}}>
               <div className='text-center text-violet-700 font-mono'>
                   <h3 className='font-bold text-2xl '>🌟 Discover Our Latest Hotel Newsletter! 🌟</h3>

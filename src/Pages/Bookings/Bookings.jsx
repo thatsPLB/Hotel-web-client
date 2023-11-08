@@ -9,16 +9,18 @@ const Bookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `http://localhost:5000/mybookings?email=${user?.email}`;
     useEffect(() => {
-        axios.get(url,{withCredentials:true})
+       if(user?.email){
+        axios.get(url)
         .then(res =>{
             setBookings(res.data);
         })
+       }
         // fetch(url)
         //     .then(res => res.json())
         //     .then(data => setBookings(data))
-    }, [url]);
+    }, [url,user?.email]);
 
     const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete?');
