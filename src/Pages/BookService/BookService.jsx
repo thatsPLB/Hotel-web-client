@@ -27,7 +27,7 @@ const BookService = () => {
 
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://assignment-11-server-hazel.vercel.app/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'

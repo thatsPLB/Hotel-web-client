@@ -48,12 +48,12 @@ const router = createBrowserRouter([
         {
           path:'book/:id',
           element:<PrivateRoute><BookService></BookService></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/Rooms/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-11-server-hazel.vercel.app/Rooms/${params.id}`)
         },
         {
           path: 'checkout/:id',
           element:<CheckOut></CheckOut>,
-          loader: ({params}) => fetch(`http://localhost:5000/Rooms/${params.id}`)
+          loader: ({params}) => fetch(`https://assignment-11-server-hazel.vercel.app/Rooms/${params.id}`)
         }
       ]
     },
